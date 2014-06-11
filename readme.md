@@ -1,4 +1,4 @@
-## ActiveREST
+ActiveREST
 =============
 
 The ActiveREST microframework is a simple but powerful RESTful framework written in pure PHP to work with Redis databases.
@@ -33,23 +33,23 @@ RewriteRule . index.php
 
 To configure ActiveREST application you need to edit `config.php` file. Configuration is provided as PHP array.
 
-Config Section | Description
+Section        | Description
 -------------- | -----------
 auth           | Authentication options.
-               | Set `required` parameter to `true` or `false` to enable or disable authentication.
-               | Set `class` to class name responsible for authentication mechanism (predefined or your own).
-               | Set `realm` to your application name or whatever you want.
+                 Set `required` parameter to `true` or `false` to enable or disable authentication.
+                 Set `class` to class name responsible for authentication mechanism (predefined or your own).
+                 Set `realm` to your application name or whatever you want.
 user           | `class` parameter have sense only when `required` in `auth` section is set to `true`
-               | and must set to class name responsible for user's authentication.
-               | With `hash` parameter you can set your own hash function used in passwords comparison. Default function is `sha1`.
-               | `users` parameter provide the list of users as PHP array.
+                 and must set to class name responsible for user's authentication.
+                 With `hash` parameter you can set your own hash function used in passwords comparison. Default function is `sha1`.
+                 `users` parameter provide the list of users as PHP array.
 import         | This section describes file import configuration as array of values. Each value must provide path to class file
-               | relative to web root folder. For example, `components.*` is correspond to `/web/server/root/components/*.php` and
-               | `extensions.SomeClass` is correspond to `/web/server/root/extensions/SomeClass.php`.
+                 relative to web root folder. For example, `components.*` is correspond to `/web/server/root/components/*.php` and
+                 `extensions.SomeClass` is correspond to `/web/server/root/extensions/SomeClass.php`.
 routes         | The most important section that configures route handling.
-               | For more details see **Route Handlers** section of this manual.
+                 For more details see **Route Handlers** section of this manual.
 params         | Everything you must need to your application working properly. Provides as PHP array.
-               | See more in **Extended Application Parameters** section.
+                 See more in **Extended Application Parameters** section.
 
 ### Route Handlers
 
@@ -84,7 +84,7 @@ The application parameters describes in `params` section of `config.php`.
 It is looks like PHP array with some keys and values (may be arrays too).
 
 For example:
-```
+```PHP
 'params'=>array(
 	'redis'=>array(
 		'host'=>null,
